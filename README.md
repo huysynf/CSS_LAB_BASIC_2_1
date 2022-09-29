@@ -2,3 +2,4 @@
 # Yêu cầu:
 - Tạo file css và import vào.
 - Hoàn thiện ít nhất 30% css của bài
+- Không cần làm hiệu ứng, chỉ làm CSS
