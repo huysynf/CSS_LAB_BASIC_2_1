@@ -1,0 +1,136 @@
+html, body{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.top {
+    width: 100%;
+}
+
+.navbar-logo{
+    float: left;
+    width: 49%;
+    color: #000;
+    margin-top: 1em;
+   
+}
+
+.navbar-menu {
+    float: right;
+    width: 50%;
+   text-align: right;
+  
+}
+.navbar-menu a{
+    color: #000;
+    display: inline-block;
+    margin-right: 1em;
+    padding: 0.6em 1em;
+}
+.bgimg-1{
+    /* background-image: url('../images/mac.jpg'); */
+    clear: both;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-position: center; */
+}
+#home{
+    position: relative;
+
+}
+.header-banner {
+    z-index: -1;
+}
+.header-banner img{
+   
+    width: 100%;
+}
+.header-content{
+    position: absolute;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+.header-content-info{
+    color: #fff;
+    margin-top: 10%;
+    height: 50%;
+    padding: 10%;
+}
+.text-large{
+    font-size: 3em;
+}
+.btn{
+    color: #000;
+    background-color: #fff;
+    padding: 0.7em;
+}
+.border-radius-1{
+    border-radius: 0.5em;
+}
+
+.text-grey{
+    color: grey;
+}
+
+.header-content-icon__wrap{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    
+    z-index: 100;
+}
+.pt-6{
+    padding-top: 4em;
+}
+
+.text-center{
+    text-align: center;
+}
+.quarter{
+    width: 23%;
+    text-align: center;
+   
+    padding: 10px;
+   
+}
+.float-left{
+    float: left;
+}
+
+.clear-both{
+    clear: both;
+}
+    
+.w-50{
+    width: 50%;
+}
+.w-100{
+    width: 100%;
+}
+.container{
+    padding: 0 1em;
+}
+
+.btn-black{
+    color: #fff;
+    background-color: #000;
+}
+
+.w-24{
+    width: 24%;
+}
+.card{
+   
+    padding: 4%;
+}
+.border-0{
+    border: unset;
+}
+.bg-grey{
+    background: grey;
+}
