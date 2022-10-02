@@ -50,8 +50,8 @@ a {
     position: sticky;
     top: 1em;
     background: #fff;
-    padding: 1em;
     display: flex;
+    justify-content: space-between;
 }
 
 .topbar-logo {
