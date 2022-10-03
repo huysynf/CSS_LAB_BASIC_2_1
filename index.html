@@ -4,7 +4,12 @@
         <title>Web template</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+        <meta
+            http-equiv="Cache-Control"
+            content="no-cache, no-store, must-revalidate"
+        />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -13,90 +18,86 @@
     </head>
     <body>
         <!-- Navbar (sit on top) -->
-        <div class="top">
-            <a href="#home" class="bar-item button navbar-logo wide">LOGO</a>
+        <div class="topbar">
+            <a href="#home" class="bar-item button topbar-logo wide">LOGO</a>
             <!-- Right-sided navbar links -->
-            <div class="navbar-menu">
-                <a href="#about" class="bar-item button">ABOUT</a>
-                <a href="#team" class="bar-item button"
+            <div class="topbar-menu">
+                <a href="#about" class="menu-bar-item button">ABOUT</a>
+                <a href="#team" class="menu-bar-item"
                     ><i class="fa fa-user"></i> TEAM</a
                 >
-                <a href="#work" class="bar-item button"
+                <a href="#work" class="menu-bar-item"
                     ><i class="fa fa-th"></i> WORK</a
                 >
-                <a href="#pricing" class="bar-item button"
+                <a href="#pricing" class="menu-bar-item"
                     ><i class="fa fa-usd"></i> PRICING</a
                 >
-                <a href="#contact" class="bar-item button"
+                <a href="#contact" class="menu-bar-item"
                     ><i class="fa fa-envelope"></i> CONTACT</a
                 >
             </div>
         </div>
         <!-- Header with full-height image -->
-        <header class="bgimg-1 display-container grayscale-min" id="home">
-            <div class="header-banner">
-                <img src="./images/mac.jpg" alt="" />
-            </div>
-            <div class="header-content">
-                <div class="header-content-info">
-                    <span class="xxlarge text-large"
-                        >Start something that matters</span
-                    ><br />
-                    <span class="large text-grey"
-                        >Stop wasting valuable time with projects that just
-                        isn't you.</span
+        <header class="" id="banner">
+            <div class="banner-content">
+                <p class="text-large banner-content__title">
+                    Start something that matters
+                </p>
+                <p class="banner-content__info">
+                    Stop wasting valuable time with projects that just isn't
+                    you.
+                </p>
+                <div class="mt-6">
+                    <a href="#about" class="btn border-radius-1"
+                        >Learn more and start today</a
                     >
-                    <div class="pt-6">
-                        <a href="#about" class="btn border-radius-1 text-grey"
-                            >Learn more and start today</a
-                        >
-                    </div>
                 </div>
-                <div
-                    class="position-absolute header-content-icon__wrap text-grey"
-                    style="padding: 24px 48px"
-                >
-                    <i class="fa fa-facebook-official hover-opacity"></i>
-                    <i class="fa fa-instagram hover-opacity"></i>
-                    <i class="fa fa-snapchat hover-opacity"></i>
-                    <i class="fa fa-pinterest-p hover-opacity"></i>
-                    <i class="fa fa-twitter hover-opacity"></i>
-                    <i class="fa fa-linkedin hover-opacity"></i>
-                </div>
+            </div>
+            <div class="banner-icon">
+                <i class="fa fa-facebook-official hover-opacity"></i>
+                <i class="fa fa-instagram hover-opacity"></i>
+                <i class="fa fa-snapchat hover-opacity"></i>
+                <i class="fa fa-pinterest-p hover-opacity"></i>
+                <i class="fa fa-twitter hover-opacity"></i>
+                <i class="fa fa-linkedin hover-opacity"></i>
             </div>
         </header>
 
         <!-- About Section -->
         <div class="container" id="about">
-            <h3 class="text-center text-large text-grey">ABOUT THE COMPANY</h3>
-            <p class="text-center">Key features of our company</p>
-            <div class="pt-6">
-                <div class="quarter float-left">
-                    <i class="fa fa-desktop text-large"></i>
+            <h3 class="text-center text-size-3 text-secondary">
+                ABOUT THE COMPANY
+            </h3>
+            <p class="text-center mb-4 text-size-2">
+                Key features of our company
+            </p>
+            <div class="row">
+                <div class="col p-1 text-center">
+                    <i class="fa fa-desktop text-size-3"></i>
                     <p class="large">Responsive</p>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore.
                     </p>
                 </div>
-                <div class="quarter float-left">
-                    <i class="fa fa-heart text-large"></i>
+                <div class="col p-l text-center">
+                    <i class="fa fa-heart text-size-3"></i>
                     <p class="large">Passion</p>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore.
                     </p>
                 </div>
-                <div class="quarter float-left">
-                    <i class="fa fa-diamond text-large"></i>
+                <div class="col p-1 text-center">
+                    <i class="fa fa-diamond text-size-3"></i>
                     <p class="large">Design</p>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore.
                     </p>
                 </div>
-                <div class="quarter float-left">
-                    <i class="fa fa-cog text-large"></i>
+                <div class="col p-1 text-center">
+                    <i class="fa fa-cog text-size-3"></i>
                     <p class="large">Support</p>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -107,11 +108,13 @@
         </div>
 
         <!-- Promo Section - "We know design" -->
-        <div class="container clear-both light-grey">
-            <div class="row-padding">
-                <div class="w-50 float-left">
-                    <h2 class="text-grey">We know design.</h2>
-                    <p>
+        <div class="container" id="promo">
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="text-center text-size-3 text-secondary">
+                        We know design.
+                    </h2>
+                    <p class="mb-4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod<br />tempor incididunt ut labore et
                         dolore.
@@ -122,7 +125,7 @@
                         >
                     </p>
                 </div>
-                <div class="w-50 float-left">
+                <div class="col-6">
                     <img
                         class="image w-100"
                         src="./images/phone_buildings.jpg"
@@ -133,18 +136,20 @@
         </div>
 
         <!-- Team Section -->
-        <div class="container clear-both" style="padding: 128px 16px" id="team">
-            <h2 class="text-center text-grey">THE TEAM</h2>
-            <p class="text-center">The ones who runs this company</p>
-            <div class="row-padding grayscale" style="margin-top: 64px">
-                <div class="w-24 float-left">
+        <div class="container" id="team">
+            <h2 class="text-center text-grey text-size-3">THE TEAM</h2>
+            <p class="text-center text-size-2">
+                The ones who runs this company
+            </p>
+            <div class="row" style="margin-top: 64px">
+                <div class="col">
                     <div class="card">
                         <img
                             src="./images/team2.jpg"
                             alt="John"
                             style="width: 100%"
                         />
-                        <div class="container">
+                        <div class="">
                             <h3>John Doe</h3>
                             <p class="opacity">CEO & Founder</p>
                             <p>
@@ -160,14 +165,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-24 float-left">
+                <div class="col">
                     <div class="card">
                         <img
                             src="./images/team1.jpg"
                             alt="Jane"
                             style="width: 100%"
                         />
-                        <div class="container">
+                        <div class="">
                             <h3>Anja Doe</h3>
                             <p class="opacity">Art Director</p>
                             <p>
@@ -183,14 +188,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-24 float-left">
+                <div class="col">
                     <div class="card">
                         <img
                             src="./images/team3.jpg"
                             alt="Mike"
                             style="width: 100%"
                         />
-                        <div class="container">
+                        <div class="">
                             <h3>Mike Ross</h3>
                             <p class="opacity">Web Designer</p>
                             <p>
@@ -206,14 +211,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-24 float-left">
+                <div class="col">
                     <div class="card">
                         <img
                             src="./images/team4.jpg"
                             alt="Dan"
                             style="width: 100%"
                         />
-                        <div class="container">
+                        <div class="">
                             <h3>Dan Star</h3>
                             <p class="opacity">Designer</p>
                             <p>
@@ -233,32 +238,32 @@
         </div>
 
         <!-- Promo Section "Statistics" -->
-        <div class="container clear-both">
-            <div class="quarter">
-                <span class="xxlarge">14+</span>
+        <div class="container row" id="statistics">
+            <div class="col text-center">
+                <span class="text-size-2">14+</span>
                 <br />Partners
             </div>
-            <div class="quarter">
-                <span class="xxlarge">55+</span>
+            <div class="col text-center">
+                <span class="text-size-2">55+</span>
                 <br />Projects Done
             </div>
-            <div class="quarter">
-                <span class="xxlarge">89+</span>
+            <div class="col text-center">
+                <span class="text-size-2">89+</span>
                 <br />Happy Clients
             </div>
-            <div class="quarter">
-                <span class="xxlarge">150+</span>
+            <div class="col text-center">
+                <span class="text-size-2">150+</span>
                 <br />Meetings
             </div>
         </div>
 
         <!-- Work Section -->
         <div class="container" style="padding: 128px 16px" id="work">
-            <h3 class="center">OUR WORK</h3>
-            <p class="center large">What we've done for people</p>
+            <h3 class="text-center text-grey text-size-3">OUR WORK</h3>
+            <p class="text-center text-size-2">What we've done for people</p>
 
-            <div class="row-padding" style="margin-top: 64px">
-                <div class="col l3 m6">
+            <div class="row flex-wrap" style="margin-top: 64px">
+                <div class="col p-2">
                     <img
                         src="/images/tech_mic.jpg"
                         style="width: 100%"
@@ -267,7 +272,7 @@
                         alt="A microphone"
                     />
                 </div>
-                <div class="col l3 m6">
+                <div class="col p-2">
                     <img
                         src="/images/tech_phone.jpg"
                         style="width: 100%"
@@ -276,7 +281,7 @@
                         alt="A phone"
                     />
                 </div>
-                <div class="col l3 m6">
+                <div class="col p-2">
                     <img
                         src="/images/tech_drone.jpg"
                         style="width: 100%"
@@ -285,7 +290,7 @@
                         alt="A drone"
                     />
                 </div>
-                <div class="col l3 m6">
+                <div class="col p-2">
                     <img
                         src="/images/tech_sound.jpg"
                         style="width: 100%"
@@ -294,10 +299,7 @@
                         alt="Soundbox"
                     />
                 </div>
-            </div>
-
-            <div class="row-padding section">
-                <div class="col l3 m6">
+                <div class="col p-2">
                     <img
                         src="/images/tech_tablet.jpg"
                         style="width: 100%"
@@ -306,7 +308,7 @@
                         alt="A tablet"
                     />
                 </div>
-                <div class="col l3 m6">
+                <div class="col p-2">
                     <img
                         src="/images/tech_camera.jpg"
                         style="width: 100%"
@@ -315,7 +317,7 @@
                         alt="A camera"
                     />
                 </div>
-                <div class="col l3 m6">
+                <div class="col p-2">
                     <img
                         src="/images/tech_typewriter.jpg"
                         style="width: 100%"
@@ -324,7 +326,7 @@
                         alt="A typewriter"
                     />
                 </div>
-                <div class="col l3 m6">
+                <div class="col p-2">
                     <img
                         src="/images/tech_tableturner.jpg"
                         style="width: 100%"
@@ -336,30 +338,11 @@
             </div>
         </div>
 
-        <!-- Modal for full size images on click-->
-        <div
-            id="modal01"
-            class="modal black"
-            onclick="this.style.display='none'"
-        >
-            <span
-                class="button xxlarge black padding-large display-topright"
-                title="Close Modal Image"
-                >&times;</span
-            >
-            <div
-                class="modal-content animate-zoom center transparent padding-64"
-            >
-                <img id="img01" class="image" />
-                <p id="caption" class="opacity large"></p>
-            </div>
-        </div>
-
         <!-- Skills Section -->
-        <div class="container light-grey padding-64">
-            <div class="row-padding">
-                <div class="col m6">
-                    <h3>Our Skills.</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 m6">
+                    <h3 class="text-grey text-size-3 mt-0">Our Skills.</h3>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod<br />
@@ -371,35 +354,28 @@
                         tempor incididunt ut labore et dolore.
                     </p>
                 </div>
-                <div class="col m6">
-                    <p class="wide">
-                        <i class="fa fa-camera margin-right"></i>Photography
+                <div class="col-6">
+                    <p class="wide d-flex pt-1">
+                        <i class="fa fa-camera pr-1"></i>Photography
                     </p>
-                    <div class="grey">
-                        <div
-                            class="container dark-grey center"
-                            style="width: 90%"
-                        >
+                    <div class="process">
+                        <div class="container process-info" style="width: 90%">
                             90%
                         </div>
                     </div>
-                    <p class="wide">
-                        <i class="fa fa-desktop margin-right"></i>Web Design
-                    </p>
-                    <div class="grey">
+                    <p class=""><i class="fa fa-desktop pr-1"></i>Web Design</p>
+                    <div class="process">
                         <div
-                            class="container dark-grey center"
+                            class="container process-info center"
                             style="width: 85%"
                         >
                             85%
                         </div>
                     </div>
-                    <p class="wide">
-                        <i class="fa fa-photo margin-right"></i>Photoshop
-                    </p>
-                    <div class="grey">
+                    <p class=""><i class="fa fa-photo pr-1"></i>Photoshop</p>
+                    <div class="process">
                         <div
-                            class="container dark-grey center"
+                            class="container process-info center"
                             style="width: 75%"
                         >
                             75%
@@ -410,63 +386,91 @@
         </div>
 
         <!-- Pricing Section -->
-        <div
-            class="container center dark-grey"
-            style="padding: 128px 16px"
-            id="pricing"
-        >
-            <h3>PRICING</h3>
-            <p class="large">Choose a pricing plan that fits your needs.</p>
-            <div class="row-padding" style="margin-top: 64px">
-                <div class="third section">
-                    <ul class="ul white hover-shadow">
-                        <li class="black xlarge padding-32">Basic</li>
-                        <li class="padding-16"><b>10GB</b> Storage</li>
-                        <li class="padding-16"><b>10</b> Emails</li>
-                        <li class="padding-16"><b>10</b> Domains</li>
-                        <li class="padding-16"><b>Endless</b> Support</li>
-                        <li class="padding-16">
+        <div class="container text-center" id="pricing">
+            <h3 class="text-size-3 text-light">PRICING</h3>
+            <p class="text-size-2 text-light">
+                Choose a pricing plan that fits your needs.
+            </p>
+            <div class="row">
+                <div class="col-4 card p-0 bg-light">
+                    <ul class="ul white hover-shadow p-0 mt-0">
+                        <li class="text-size-2 bg-dark text-light p-2">
+                            Basic
+                        </li>
+                        <li class="p-2 border-t-1 border-color-sencondary">
+                            <b>10GB</b> Storage
+                        </li>
+                        <li class="p-2 border-t-1 border-color-sencondary">
+                            <b>10</b> Emails
+                        </li>
+                        <li class="p-2 border-t-1 border-color-sencondary">
+                            <b>10</b> Domains
+                        </li>
+                        <li class="p-2 border-t-1 border-color-sencondary">
+                            <b>Endless</b> Support
+                        </li>
+                        <li class="p-2 border-t-1 border-color-sencondary">
                             <h2 class="wide">$ 10</h2>
                             <span class="opacity">per month</span>
                         </li>
-                        <li class="light-grey padding-24">
-                            <button class="button black padding-large">
+                        <li class="light-grey border-t-1 pt-1">
+                            <button class="btn btn-black border-0 mt-2">
                                 Sign Up
                             </button>
                         </li>
                     </ul>
                 </div>
-                <div class="third">
-                    <ul class="ul white hover-shadow">
-                        <li class="red xlarge padding-48">Pro</li>
-                        <li class="padding-16"><b>25GB</b> Storage</li>
-                        <li class="padding-16"><b>25</b> Emails</li>
-                        <li class="padding-16"><b>25</b> Domains</li>
-                        <li class="padding-16"><b>Endless</b> Support</li>
-                        <li class="padding-16">
+                <div class="col-4 card p-0 bg-light">
+                    <ul class="ul white hover-shadow p-0 mt-0">
+                        <li class="text-size-2 bg-danger p-2 text-light">
+                            Pro
+                        </li>
+                        <li class="p-2 border-t-1 border-color-sencondary">
+                            <b>25GB</b> Storage
+                        </li>
+                        <li class="p-2 border-t-1 border-color-sencondary">
+                            <b>25</b> Emails
+                        </li>
+                        <li class="p-2 border-t-1 border-color-sencondary">
+                            <b>25</b> Domains
+                        </li>
+                        <li class="p-2 border-t-1 border-color-sencondary">
+                            <b>Endless</b> Support
+                        </li>
+                        <li class="p-2 border-t-1 border-color-sencondary">
                             <h2 class="wide">$ 25</h2>
                             <span class="opacity">per month</span>
                         </li>
-                        <li class="light-grey padding-24">
-                            <button class="button black padding-large">
+                        <li class="light-grey border-t-1">
+                            <button class="btn btn-black btn border-0 mt-2">
                                 Sign Up
                             </button>
                         </li>
                     </ul>
                 </div>
-                <div class="third section">
-                    <ul class="ul white hover-shadow">
-                        <li class="black xlarge padding-32">Premium</li>
-                        <li class="padding-16"><b>50GB</b> Storage</li>
-                        <li class="padding-16"><b>50</b> Emails</li>
-                        <li class="padding-16"><b>50</b> Domains</li>
-                        <li class="padding-16"><b>Endless</b> Support</li>
-                        <li class="padding-16">
+                <div class="col-4 card p-0 bg-light">
+                    <ul class="ul white hover-shadow p-0 mt-0">
+                        <li class="text-size-2 bg-dark p-2 text-light">
+                            Premium
+                        </li>
+                        <li class="p-2 border-t-1 border-color-sencondary">
+                            <b>50GB</b> Storage
+                        </li>
+                        <li class="p-2 border-t-1 border-color-sencondary">
+                            <b>50</b> Emails
+                        </li>
+                        <li class="p-2 border-t-1 border-color-sencondary">
+                            <b>50</b> Domains
+                        </li>
+                        <li class="p-2 border-t-1 border-color-sencondary">
+                            <b>Endless</b> Support
+                        </li>
+                        <li class="p-2 border-t-1 border-color-sencondary">
                             <h2 class="wide">$ 50</h2>
                             <span class="opacity">per month</span>
                         </li>
-                        <li class="light-grey padding-24">
-                            <button class="button black padding-large">
+                        <li class="light-grey border-t-1">
+                            <button class="btn btn-black border-0 mt-2">
                                 Sign Up
                             </button>
                         </li>
@@ -476,84 +480,89 @@
         </div>
 
         <!-- Contact Section -->
-        <div
-            class="container light-grey"
-            style="padding: 128px 16px"
-            id="contact"
-        >
-            <h3 class="center">CONTACT</h3>
-            <p class="center large">Lets get in touch. Send us a message:</p>
-            <div style="margin-top: 48px">
-                <p>
-                    <i class="fa fa-map-marker fa-fw xxlarge margin-right"></i>
-                    Chicago, US
+        <div class="" id="contact">
+            <div class="container">
+                <h3 class="text-center text-size-3">CONTACT</h3>
+                <p class="text-center text-size-2">
+                    Lets get in touch. Send us a message:
                 </p>
-                <p>
-                    <i class="fa fa-phone fa-fw xxlarge margin-right"></i>
-                    Phone: +00 151515
-                </p>
-                <p>
-                    <i class="fa fa-envelope fa-fw xxlarge margin-right"> </i>
-                    Email: mail@mail.com
-                </p>
-                <br />
-                <form action="/action_page.php" target="_blank">
+                <div style="margin-top: 48px" class="text-size-2">
                     <p>
-                        <input
-                            class="input border"
-                            type="text"
-                            placeholder="Name"
-                            required
-                            name="Name"
-                        />
+                        <i
+                            class="fa fa-map-marker fa-fw xxlarge margin-right"
+                        ></i>
+                        Chicago, US
                     </p>
                     <p>
-                        <input
-                            class="input border"
-                            type="text"
-                            placeholder="Email"
-                            required
-                            name="Email"
-                        />
+                        <i class="fa fa-phone fa-fw xxlarge margin-right"></i>
+                        Phone: +00 151515
                     </p>
                     <p>
-                        <input
-                            class="input border"
-                            type="text"
-                            placeholder="Subject"
-                            required
-                            name="Subject"
-                        />
+                        <i class="fa fa-envelope fa-fw xxlarge margin-right">
+                        </i>
+                        Email: mail@mail.com
                     </p>
-                    <p>
-                        <input
-                            class="input border"
-                            type="text"
-                            placeholder="Message"
-                            required
-                            name="Message"
-                        />
-                    </p>
-                    <p>
-                        <button class="button black" type="submit">
-                            <i class="fa fa-paper-plane"></i> SEND MESSAGE
-                        </button>
-                    </p>
-                </form>
+                    <br />
+                    <form action="/action_page.php" target="_blank">
+                        <p>
+                            <input
+                                class="form-control"
+                                type="text"
+                                placeholder="Name"
+                                required
+                                name="Name"
+                            />
+                        </p>
+                        <p>
+                            <input
+                                class="form-control"
+                                type="text"
+                                placeholder="Email"
+                                required
+                                name="Email"
+                            />
+                        </p>
+                        <p>
+                            <input
+                                class="form-control"
+                                type="text"
+                                placeholder="Subject"
+                                required
+                                name="Subject"
+                            />
+                        </p>
+                        <p>
+                            <input
+                                class="form-control"
+                                type="text"
+                                placeholder="Message"
+                                required
+                                name="Message"
+                            />
+                        </p>
+                        <p>
+                            <button class="btn btn-black" type="submit">
+                                <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                            </button>
+                        </p>
+                    </form>
+                </div>
                 <!-- Image of location/map -->
-                <img
-                    src="/images/map.jpg"
-                    class="image greyscale"
-                    style="width: 100%; margin-top: 48px"
-                />
             </div>
+            <img
+                src="/images/map.jpg"
+                class="image greyscale"
+                style="width: 100%; margin-top: 48px"
+            />
         </div>
 
         <!-- Footer -->
-        <footer class="center black padding-64">
-            <a href="#home" class="button light-grey"
-                ><i class="fa fa-arrow-up margin-right"></i>To the top</a
-            >
+        <footer class="text-center p-2 bg-dark text-light d-flex flex-column">
+            <div class="d-flex text-center justify-center">
+                <a href="#home" class="btn m-1"
+                    ><i class="fa fa-arrow-up margin-right"></i>To the top</a
+                >
+            </div>
             <div class="xlarge section">
                 <i class="fa fa-facebook-official hover-opacity"></i>
                 <i class="fa fa-instagram hover-opacity"></i>
