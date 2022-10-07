@@ -43,12 +43,73 @@ body {
     width: 100%;
     margin: 0;
 }
+/* start reponse */
+
+/* end response */
+.menu-child-vertical li {
+    list-style: none;
+    padding: 5px 20px;
+    border: 1px solid #aaa;
+    color: white;
+}
+
+.menu-bar-item:hover .menu-child-vertical {
+    visibility: visible;
+    left: 0;
+    opacity: 1;
+}
+
+.menu-child-vertical {
+    position: absolute;
+    background: #757575;
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    top: 16px;
+    padding-left: 0;
+    left: 300px;
+    min-width: 200px;
+    z-index: 10000;
+}
+
+.menu-child-vertical > li:hover {
+    background: #a14242af;
+}
+.topbar {
+    z-index: 10000;
+}
+
+.menu-bar-item {
+    position: relative;
+}
+
+.topbar-menu a:hover {
+    background: var(--bs-secondary);
+    color: var(--bs-light);
+}
+.menu-bar-item:hover::after {
+    width: 100%;
+    visibility: visible;
+}
+.menu-bar-item::after {
+    content: "";
+    position: absolute;
+    transition: all 1s ease;
+    width: 1%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+    background: rgba(108, 104, 104, 0.193);
+}
+
 a {
     text-decoration: none;
 }
+
 .topbar {
-    position: sticky;
-    top: 1em;
+    /* position: sticky; */
+    /* top: 1em; */
     background: #fff;
     display: flex;
     justify-content: space-between;
@@ -66,11 +127,6 @@ a {
     padding: 0.5em 1em;
     color: var(--bs-dark);
     transition: all 0.5s ease-in-out;
-}
-
-.topbar-menu a:hover {
-    background: var(--bs-secondary);
-    color: var(--bs-light);
 }
 
 #banner {
@@ -98,7 +154,7 @@ a {
 }
 
 .banner-content__info {
-    color: var(--bs-secondary);
+    color: white;
 }
 .btn {
     background: var(--bs-secondary);
@@ -303,4 +359,128 @@ a {
 
 .m-1 {
     margin: 1em;
+}
+
+@media only screen and (max-width: 578px) {
+    .menu-bar-item {
+        font-size: 0.5em;
+        height: 1.5em;
+    }
+    .topbar-logo {
+        width: 20%;
+    }
+    .topbar-menu {
+        width: 80%;
+    }
+    .text-xm {
+        font-size: 0.6em;
+    }
+    .text-size-4 {
+        font-size: 0.6em;
+    }
+    #banner {
+        height: 50% !important;
+    }
+    .banner-content__title {
+        font-size: 1.5em !important;
+    }
+    .btn {
+        font-size: 0.6em;
+        padding: 0.3em;
+    }
+    .col-response {
+        border: 1px solid red;
+        width: 50%;
+    }
+    .topbar-logo {
+        display: none;
+    }
+}
+.menu-icon-navbar {
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    position: relative;
+    border: 2px solid #198754;
+    border-left: unset;
+    border-right: unset;
+}
+.menu-icon-navbar span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #198754;
+    left: 0;
+}
+.menu-icon-navbar:hover {
+    border: unset;
+}
+
+.menu-icon-navbar span:first-child {
+    top: 50%;
+}
+.menu-icon-navbar:hover span:first-child {
+    rotate: 45deg;
+}
+.menu-icon-navbar:hover span:last-child {
+    rotate: -45deg;
+}
+
+.menu-icon-navbar span:last-child {
+    top: 50%;
+}
+/* tablets */
+@media only screen and (max-width: 768px) and (min-width: 578px) {
+    .menu-bar-item {
+        font-size: 0.6em;
+        height: 2em;
+    }
+    .topbar-logo {
+        width: 25%;
+    }
+    .topbar-menu {
+        width: 75%;
+    }
+    .text-sm {
+        font-size: 0.8em;
+    }
+    .text-size-4,
+    .btn {
+        font-size: 0.8em;
+    }
+    .col-response {
+        width: 33.33%;
+        border: 1px solid red;
+    }
+    .topbar-logo {
+        display: none;
+    }
+}
+
+/* desktop */
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+    .menu-bar-item {
+        font-size: 0.8em;
+        height: 2.5em;
+    }
+    .menu-icon-navbar {
+        display: none;
+    }
+}
+
+/*large desktop */
+@media only screen and (max-width: 1200px) and (min-width: 992px) {
+    .menu-bar-item {
+        font-size: 0.9em;
+    }
+    .menu-icon-navbar {
+        display: none;
+    }
+}
+/*extra desktop */
+@media only screen and (min-width: 1200px) {
+    .menu-icon-navbar {
+        display: none;
+    }
 }
